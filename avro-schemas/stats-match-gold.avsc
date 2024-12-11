@@ -1,0 +1,29 @@
+{
+    "namespace": "statistics.match",
+    "type": "record",
+    "name": "Gold",
+    "fields": [
+        {
+            "name": "playerGold",
+            "type": {
+                "type": "map",
+                "values": {
+                    "type": "array",
+                    "items": "float"
+                }
+            },
+            "doc": "Map containing the participantId (1...10) and a list of value per second of the gold."
+        },
+        {
+            "name": "teamGold",
+            "type": {
+                "type": "map",
+                "values": {
+                    "type": "array",
+                    "items": "float"
+                }
+            },
+            "doc": "Map containing the participantId (100, 200) and a list of value per second of the gold."
+        }
+    ]
+}

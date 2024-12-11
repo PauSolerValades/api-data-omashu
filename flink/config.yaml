@@ -1,0 +1,51 @@
+blob:
+  server:
+    port: '6124'
+env:
+  java:
+    home: /usr/lib/jvm/java-11-openjdk-${TARGETARCH}
+    opts: -Djava.library.path=/usr/lib/jvm/java-11-openjdk-${TARGETARCH}/lib --illegal-access=warn
+metrics:
+  scope:
+    operator: <host>.taskmanager.<tm_id>.<job_name>.<operator_name>.<subtask_index>
+    task: <host>.taskmanager.<tm_id>.<job_name>.<task_name>.<subtask_index>
+    job: <host>.jobmanager.<job_name>
+jobmanager:
+  rpc:
+    address: jobmanager
+  bind-host: 0.0.0.0
+  memory:
+    process:
+      size: 2048m
+python:
+  client:
+    executable: python
+  executable: python
+query:
+  server:
+    port: '6125'
+execution:
+  checkpointing:
+    storage: jobmanager
+    interval: 10
+parallelism:
+  default: 1
+taskmanager:
+  numberOfTaskSlots: 2
+  memory:
+    process:
+      size: 1024m
+  bind-host: 0.0.0.0
+  cleanup-state-on-exit: true
+state:
+  backend:
+    type: hashmap
+web:
+  cancel:
+    enable: true
+  submit:
+    enable: true
+rest:
+  port: '8082'
+  address: jobmanager
+high-availability: none

@@ -1,0 +1,1 @@
+{"riotId": "VeraSera#1130", "server": "EUW1", "puuid": null, "omashuId": "efe41d98-84f2-4247-a767-c7ad389467ac"}

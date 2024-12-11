@@ -1,0 +1,1 @@
+{"riotId": "Barckgon#EUW", "server": "EUW1", "puuid": null, "omashuId": "23c21dd1-fe7e-467b-abbd-bdfb7277e551"}

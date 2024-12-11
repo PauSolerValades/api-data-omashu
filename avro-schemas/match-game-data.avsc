@@ -1,0 +1,16 @@
+{
+    "type": "record",
+    "namespace": "process_data",
+    "name": "MatchGameData",
+    "fields": [
+        {
+            "name": "matchId",
+            "type": "string",
+            "doc": "Unique matchId identifier SER_XXXXXXXX"
+        },
+        {
+            "name": "data",
+            "type": "string"
+        }
+    ]
+}

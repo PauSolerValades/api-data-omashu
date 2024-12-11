@@ -1,0 +1,38 @@
+{
+    "namespace": "statistics.match",
+    "type": "record",
+    "name": "Match",
+    "fields": [
+        {
+            "name": "matchId",
+            "type": "string",
+            "doc": "Riot's Unique match identifier SER_XXXXXXX"
+        },
+        {
+            "name": "team100Id",
+            "type": [
+                "null",
+                "string"
+            ],
+            "doc": "omashu teamId for blue corner team",
+            "default": null
+        },
+        {
+            "name": "team200Id",
+            "type": [
+                "null",
+                "string"
+            ],
+            "doc": "omashu teamId for red corner team",
+            "default": null
+        },
+        {
+            "name": "stats",
+            "type": [
+                "statistics.match.Summary",
+                "statistics.match.Contribution"
+            ],
+            "doc": "Type of avro which contains actual data"
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+{"teamId":"937180-asd832y0fs92","period":"2024-08","spiderGraph":{"totalKills":25.0,"teamVisionScore":75.0,"openedLanes":3.0,"buildingKills":5.0,"dragonKills":2.0,"voidMonsterKills":1.0,"teamLevel":18.0,"teamGold":50000.0}}

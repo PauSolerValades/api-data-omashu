@@ -1,0 +1,85 @@
+{
+  "namespace": "data_obtetion",
+  "type": "record",
+  "name": "DownloadStatus",
+  "fields": [
+    {
+      "name": "riotId",
+      "type": "string",
+      "logicType": "uuid"
+    },
+    {
+      "name": "server",
+      "type": {
+        "type": "enum",
+        "name": "Server",
+        "symbols": [
+          "EUW1",
+          "EUN1",
+          "RU",
+          "TR1",
+          "NA1",
+          "BR1",
+          "LA1",
+          "LA2",
+          "KR",
+          "JP1",
+          "OC1",
+          "PH2",
+          "SG2",
+          "TH2",
+          "TW2",
+          "VN2"
+        ]
+      }
+    },
+    {
+      "name": "puuid",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "logicType": "uuid"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "status",
+      "type": {
+        "type": "enum",
+        "name": "DownloadStatusEnum",
+        "symbols": [
+          "PROCESSING",
+          "COMPLETED",
+          "FAILED"
+        ]
+      }
+    },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "failureReason",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "FailureReason",
+          "symbols": [
+            "NOT_FOUND",
+            "RETRIES_EXCEEDED",
+            "NETWORK_ERROR",
+            "TIMEOUT",
+            "UNKNOWN_ERROR"
+          ]
+        }
+      ],
+      "default": null
+    }
+  ]
+}

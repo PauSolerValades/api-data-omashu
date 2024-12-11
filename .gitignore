@@ -1,0 +1,13 @@
+.env
+./postgresql
+./data-localstack
+./docker/dynamodb
+./testbucket
+./riot-petitions/logs/*
+/riot-petitions/logs/*
+/flink/logs/*
+./flink/logs/*
+/flink/output/*
+./flink/output/*
+output/*
+/postgresql

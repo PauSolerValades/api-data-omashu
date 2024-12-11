@@ -1,0 +1,1 @@
+{"riotId": "Resistirse#2776", "server": "EUW1", "puuid": null, "omashuId": "b254b61a-3940-4c8d-bf20-013261ae89c2"}

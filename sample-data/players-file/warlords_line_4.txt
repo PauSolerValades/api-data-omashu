@@ -1,0 +1,1 @@
+{"riotId": "Calentura#UwU", "server": "EUW1", "puuid": null, "omashuId": "99bf0c25-7d09-4383-bf3d-6c83cee18fc5"}

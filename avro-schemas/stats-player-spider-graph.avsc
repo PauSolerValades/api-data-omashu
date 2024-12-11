@@ -1,0 +1,51 @@
+{
+    "namespace": "statistics.player",
+    "type": "record",
+    "name": "SpiderGraph",
+    "fields": [
+        {
+            "name": "championId",
+            "type": "int"
+        },
+        {
+            "name": "position",
+            "type": {
+                "type": "enum",
+                "name": "Position",
+                "symbols": [
+                    "TOP",
+                    "JUNGLE",
+                    "MID",
+                    "BOT",
+                    "UTILITY"
+                ]
+            }
+        },
+        {
+            "name": "spiderGraph",
+            "type": {
+                "type": "map",
+                "values": "float"
+            }
+        },
+        {
+            "name": "mostUsedItemIds",
+            "type": {
+                "type": "array",
+                "items": "int"
+            }
+        },
+        {
+            "name": "matchesPlayed",
+            "type": "int"
+        },
+        {
+            "name": "winrate",
+            "type": "float"
+        },
+        {
+            "name": "contribution",
+            "type": "float"
+        }
+    ]
+}

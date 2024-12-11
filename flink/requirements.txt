@@ -1,0 +1,6 @@
+apache-flink==1.19.1
+apache-flink-libraries==1.19.1
+confluent-kafka==2.5.3
+pydantic==2.9.0
+pydantic-settings==2.4.0
+fastavro==1.9.7

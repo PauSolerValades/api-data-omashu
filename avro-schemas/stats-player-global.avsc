@@ -1,0 +1,19 @@
+{
+    "namespace": "statistics.player",
+    "type": "record",
+    "name": "Global",
+    "fields": [
+        {
+            "name": "kda",
+            "type": "float"
+        },
+        {
+            "name": "winrate",
+            "type": "float"
+        },
+        {
+            "name": "contribution",
+            "type": "float"
+        }
+    ]
+}

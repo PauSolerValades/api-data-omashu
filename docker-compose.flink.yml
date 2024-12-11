@@ -1,0 +1,204 @@
+networks:
+  api-data-network:
+    external: true
+    driver: bridge
+
+x-bake:
+  targets:
+    default:
+      platforms:
+        - ${DEFAULT_PLATFORM:-linux/arm64}
+        - ${ALTERNATIVE_PLATFORM:-linux/amd64}
+
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: api-data_zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: ${ZOOKEEPER_CLIENT_PORT}
+      ZOOKEEPER_TICK_TIME: ${ZOOKEEPER_TICK_TIME}
+    ports:
+      - "2181:2181"
+    networks:
+      - api-data-network
+    healthcheck:
+      test: [ "CMD-SHELL", "echo ruok | nc localhost 2181" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: api-data_kafka
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: ${KAFKA_BROKER_ID}
+      KAFKA_ZOOKEEPER_CONNECT: ${KAFKA_ZOOKEEPER_CONNECT}
+      KAFKA_ADVERTISED_LISTENERS: ${KAFKA_ADVERTISED_LISTENERS}
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: ${KAFKA_LISTENER_SECURITY_PROTOCOL_MAP}
+      KAFKA_INTER_BROKER_LISTENER_NAME: ${KAFKA_INTER_BROKER_LISTENER_NAME}
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: ${KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR}
+      MIN_COMMIT_COUNT: ${MIN_COMMIT_COUNT:-10}
+      CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: kafka:${KAFKA_PORT}
+    networks:
+      - api-data-network
+    ports:
+      - "${KAFKA_PORT}:${KAFKA_PORT}"
+    healthcheck:
+      test: [ "CMD-SHELL", "kafka-broker-api-versions --bootstrap-server localhost:${KAFKA_PORT}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  schema-registry:
+    image: confluentinc/cp-schema-registry:latest
+    container_name: api-data_schema-registry
+    platform: ${PLATFORM}
+    hostname: api-data_schema-registry
+    depends_on:
+      kafka:
+        condition: service_healthy
+    networks:
+      - api-data-network
+    ports:
+      - "${SCHEMA_REGISTRY_PORT}:${SCHEMA_REGISTRY_PORT}"
+    healthcheck:
+      test: [ "CMD", "curl", "--output", "/dev/null", "--silent", "--head", "--fail", "http://schema-registry:${SCHEMA_REGISTRY_PORT}/subjects" ]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+    environment:
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: 'PLAINTEXT://kafka:${KAFKA_PORT}'
+      SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:${SCHEMA_REGISTRY_PORT}
+
+  init-kafka:
+    build: ./init-kafka
+    container_name: api-data_init-kafka
+    depends_on:
+      kafka:
+        condition: service_healthy
+      schema-registry:
+        condition: service_healthy
+    environment:
+      KAFKA_PORT: ${KAFKA_PORT}
+      ZOOKEEPER_CLIENT_PORT: ${ZOOKEEPER_CLIENT_PORT}
+      SCHEMA_REGISTRY_PORT: ${SCHEMA_REGISTRY_PORT}
+    networks:
+      - api-data-network
+    volumes:
+      - ./avro-schemas:/avro-schemas:ro
+
+  jobmanager:
+    container_name: api-data_flink-jobmanager
+    healthcheck:
+      test: [ "CMD", "nc", "-zv", "jobmanager", "6123" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    build:
+      context: ./flink
+      args:
+        TARGETARCH: ${TARGETARCH:-amd64}
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
+    user: "${USER_ID}:${GROUP_ID}"
+    hostname: jobmanager
+    depends_on:
+      - init-kafka
+    command: jobmanager
+    ports:
+      - "${FLINK_PORT}:${FLINK_PORT}" # REST port
+      - "6123:6123" # RPC port
+      - "6124:6124" # Blob server
+      - "6125:6125" # Query server
+    environment:
+      FLINK_PORT: ${FLINK_PORT}
+      KAFKA_PORT: ${KAFKA_PORT}
+      SCHEMA_REGISTRY_PORT: ${SCHEMA_REGISTRY_PORT}
+      TOPIC_MATCH_DATA: ${TOPIC_MATCH_DATA}
+      FLINK_PROPERTIES: |-
+        jobmanager.rpc.address: jobmanager
+    volumes:
+      - ./flink/jobs:/opt/flink/jobs
+      - ./flink/logs:/opt/flink/log
+      - ./flink/output:/opt/flink/output:rwo
+    networks:
+      - api-data-network
+
+  taskmanager:
+    container_name: api-data_flink-taskmanager
+    build:
+      context: ./flink
+      args:
+        TARGETARCH: ${TARGETARCH}
+    user: "${USER_ID}:${GROUP_ID}"
+    hostname: taskmanager
+    depends_on:
+      - jobmanager
+    command: taskmanager
+    environment:
+      FLINK_PROPERTIES: |-
+        jobmanager.rpc.address: jobmanager
+    ports:
+      - "6121:6121"
+    volumes:
+      - ./flink/logs:/opt/flink/log
+      - ./flink/output:/opt/flink/output
+    networks:
+      - api-data-network
+
+  riot-petitions:
+    container_name: api-data_riot-petitions
+    depends_on:
+      - init-kafka
+      - redis
+    build:
+      context: ./riot-petitions
+      args:
+        - GITHUB_TOKEN=${GITHUB_PERSONAL_ACCESS_TOKEN_CLASSIC}
+        - TARGETARCH=${TARGETARCH:-arm64}
+        - PLATFORM=${PLATFORM:-linux/arm64}
+    platform: ${PLATFORM}
+    user: "${USER_ID}:${GROUP_ID}"
+    restart: always
+    env_file:
+      - .env
+    environment:
+      PLATFORM: ${PLATFORM:-linux/amd64}
+      RATE_LIMITER_PORT: ${RATE_LIMITER_PORT:-8011}
+      KAFKA_HOST: kafka_host
+      KAFKA_BROKER: ${KAFKA_BROKER}
+      KAFKA_PORT: ${KAFKA_PORT}
+      SCHEMA_REGISTRY_PORT: ${SCHEMA_REGISTRY_PORT}
+      TOPIC_DOWNLOAD_STATUS: download-status
+      TOPIC_MATCH_DATA: match-data
+      GITHUB_TOKEN: ${GITHUB_PERSONAL_ACCESS_TOKEN_CLASSIC}
+      TOPIC_USER_EXISTS: download-user-exists
+      POP_SLEEP_MILLISECONDS: 10000
+      MIN_MONTH: 202407
+      GOROUTINES_PER_REGION: 4
+      LOGS_TO_FILE: False
+    volumes:
+      - ./riot-petitions/logs/:/app/logs
+    networks:
+      - api-data-network
+
+  redis:
+    container_name: api-data_redis
+    image: redis:alpine
+    command: redis-server /usr/local/etc/redis/redis.conf
+    environment:
+      REDIS_PORT: ${REDIS_PORT}
+      REDIS_REPLICATION_MODE: master
+    ports:
+      - "${REDIS_PORT}"
+    volumes:
+      - ./redis/redis-data:/var/lib/redis
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    networks:
+      - api-data-network
+
+volumes:
+  testbucket:

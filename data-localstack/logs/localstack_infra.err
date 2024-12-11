@@ -1,0 +1,11 @@
+SERVICES variable is ignored if EAGER_SERVICE_LOADING=0.
+2024-06-28T13:28:52.250  WARN --- [  Thread-108] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+2024-06-28T13:28:52.250  WARN --- [  Thread-108] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+2024-06-28T13:28:52.252  INFO --- [  Thread-108] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+2024-06-28T13:28:52.252  INFO --- [  Thread-108] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+2024-06-28T13:28:53.537  INFO --- [  Thread-111] l.services.motoserver      : starting moto server on http://0.0.0.0:50323
+2024-06-28T13:28:53.538  INFO --- [   asgi_gw_0] localstack.services.infra  : Starting mock S3 service on http port 4566 ...
+2024-06-28T13:28:53.613  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.CreateBucket => 200
+2024-06-28T13:28:53.936 ERROR --- [   asgi_gw_0] l.aws.handlers.logging     : exception during call chain: 
+2024-06-28T13:28:53.936  INFO --- [   asgi_gw_0] l.aws.handlers.service     : API action 'CreateVault' for service 'glacier' not yet implemented or pro feature - check https://docs.localstack.cloud/aws/feature-coverage for further information
+2024-06-28T13:28:53.937  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS glacier.CreateVault => 501 (InternalFailure)

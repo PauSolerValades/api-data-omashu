@@ -1,0 +1,1 @@
+{"riotId": "eloiki#EUW", "server": "EUW1", "puuid": null, "omashuId": "87aea654-458e-4a8b-916a-3a99576b17e8"}

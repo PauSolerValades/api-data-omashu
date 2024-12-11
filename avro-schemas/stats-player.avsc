@@ -1,0 +1,26 @@
+{
+    "namespace": "statistics.player",
+    "type": "record",
+    "name": "MyPlayer",
+    "fields": [
+        {
+            "name": "omashuId",
+            "type": "string",
+            "logicType": "uuid",
+            "doc": "Unique id of the user registered"
+        },
+        {
+            "name": "period",
+            "type": "string",
+            "doc": "YYYY-MM for month, YYYY-SX for season within a year"
+        },
+        {
+            "name": "stats",
+            "type": [
+                "statistics.player.SpiderGraph",
+                "statistics.player.Global"
+            ],
+            "doc": "Type of avro which contains actual data"
+        }
+    ]
+}

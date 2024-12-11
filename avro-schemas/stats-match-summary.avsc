@@ -1,0 +1,21 @@
+{
+    "namespace": "statistics.match",
+    "type": "record",
+    "name": "Summary",
+    "fields": [
+        {
+            "name": "team100Metrics",
+            "type": {
+                "type": "map",
+                "values": "float"
+            }
+        },
+        {
+            "name": "team200Metrics",
+            "type": {
+                "type": "map",
+                "values": "float"
+            }
+        }
+    ]
+}

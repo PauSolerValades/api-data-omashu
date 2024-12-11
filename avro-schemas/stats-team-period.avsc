@@ -1,0 +1,22 @@
+{
+    "namespace": "statistics.team",
+    "type": "record",
+    "name": "StatsTeamPeriod",
+    "fields": [
+        {
+            "name": "teamId",
+            "type": "string"
+        },
+        {
+            "name": "period",
+            "type": "string"
+        },
+        {
+            "name": "spiderGraph",
+            "type": {
+                "type": "map",
+                "values": "float"
+            }
+        }
+    ]
+}

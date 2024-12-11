@@ -1,0 +1,37 @@
+{
+    "type": "record",
+    "namespace": "data_obtention",
+    "name": "Match",
+    "fields": [
+        {
+            "name": "matchId",
+            "type": "string",
+            "doc": "Unique matchId identifier SER_XXXXXXXX"
+        },
+        {
+            "name": "obtainedAt",
+            "type": "int",
+            "doc": "Timestamp in milliseconds"
+        },
+        {
+            "name": "omashuId",
+            "type": "string",
+            "doc": "uuid of the player who started the download."
+        },
+        {
+            "name": "puuid",
+            "type": "string",
+            "doc": "puuid (uuid) of the player who started the download."
+        },
+        {
+            "name": "dataType",
+            "type": "string",
+            "doc": "Identifies which type of data is in the rawData parameters. Can have two values: POSTMATCH or BYTIME. To see why this is not implemented as en ENUM, look the documentation."
+        },
+        {
+            "name": "data",
+            "type": "string",
+            "doc": "Match Data in string format as received from RIOT"
+        }
+    ]
+}

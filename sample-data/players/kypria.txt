@@ -1,0 +1,7 @@
+{"riotId": "BDS Benddy#UWU", "server": "EUW1", "puuid": null, "omashuId": "51a97391-d3cc-4a8c-a94f-246ba6528c0c"}
+{"riotId": "Distinger#euw", "server": "EUW1", "puuid": null, "omashuId": "cf37f79d-2600-4d66-9ef5-80bc7cbc4068"}
+{"riotId": "BTS ShidouRyusei#BTS14", "server": "EUW1", "puuid": null, "omashuId": "ad854c59-7ae5-4362-b972-903c31af7559"}
+{"riotId": "VeraSera#1130", "server": "EUW1", "puuid": null, "omashuId": "efe41d98-84f2-4247-a767-c7ad389467ac"}
+{"riotId": "BTS Cramitus#BTS2", "server": "EUW1", "puuid": null, "omashuId": "2ad1ad63-1c0b-4dab-85e6-28d3a2cbf6d8"}
+{"riotId": "ORIZ0N#CJL", "server": "EUW1", "puuid": null, "omashuId": "eec43c7e-9286-41ca-bc9c-8e7598952446"}
+{"riotId": "MarkK1NG#EUW", "server": "EUW1", "puuid": null, "omashuId": "c445e115-2e40-4387-8fc0-5aeaa2258969"}

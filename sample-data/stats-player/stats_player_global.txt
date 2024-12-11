@@ -1,0 +1,1 @@
+{"omashuId": "0515a2f1-d138-4254-8bef-bcfbd48482ea", "period": "2024-08", "stats": {"statistics.player.Global": {"kda": 17.0, "winrate": 0.54, "contribution": 0.4}}}

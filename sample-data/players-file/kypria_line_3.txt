@@ -1,0 +1,1 @@
+{"riotId": "BTS ShidouRyusei#BTS14", "server": "EUW1", "puuid": null, "omashuId": "ad854c59-7ae5-4362-b972-903c31af7559"}

@@ -1,0 +1,39 @@
+{
+    "namespace": "statistics.match",
+    "type": "record",
+    "name": "Contribution",
+    "fields": [
+        {
+            "name": "winningTeam",
+            "type": "int"
+        },
+        {
+            "name": "predictedWinningTeam",
+            "type": "int"
+        },
+        {
+            "name": "teamContribution",
+            "type": {
+                "type": "map",
+                "values": "float",
+                "doc": "Map of player slot to their team contribution percentage"
+            }
+        },
+        {
+            "name": "matchContribution",
+            "type": {
+                "type": "map",
+                "values": "float",
+                "doc": "Map of player slot to their match contribution percentage"
+            }
+        },
+        {
+            "name": "dominance",
+            "type": {
+                "type": "map",
+                "values": "float",
+                "doc": "Map of team ID to their dominance percentage"
+            }
+        }
+    ]
+}

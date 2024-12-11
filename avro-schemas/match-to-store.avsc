@@ -1,0 +1,22 @@
+{
+    "type": "record",
+    "namespace": "process_data",
+    "name": "MatchToStore",
+    "fields": [
+        {
+            "name": "matchId",
+            "type": "string",
+            "doc": "Unique matchId identifier SER_XXXXXXXX"
+        },
+        {
+            "name": "POSTMATCH",
+            "type": "bytes",
+            "doc": "Data stored in binary to store"
+        },
+        {
+            "name": "BYTIME",
+            "type": "bytes",
+            "doc": "Data stored in binary to store"
+        }
+    ]
+}

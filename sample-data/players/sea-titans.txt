@@ -1,0 +1,7 @@
+{"riotId": "Tris#Miso", "server": "EUW1", "puuid": null, "omashuId": "2f1bd363-0edb-41cb-99f8-6cbe64b04a38"}
+{"riotId": "TheFurryBeast#WOW", "server": "EUW1", "puuid": null, "omashuId": "42ddf239-e9c2-49be-a06d-f92c29c64d80"}
+{"riotId": "gerani vermell#EUW", "server": "EUW1", "puuid": null, "omashuId": "947dcf5e-3fee-4ca2-a46a-d8cbf4371939"}
+{"riotId": "SU Papu#EUW", "server": "EUW1", "puuid": null, "omashuId": "d9237774-d025-48d3-af41-ba54ca58e3cc"}
+{"riotId": "胖胖的哆啦a梦#0828", "server": "EUW1", "puuid": null, "omashuId": "d163e9cb-3370-4272-b5d6-77571d9119e7"}
+{"riotId": "ElBuscaPercales#EUW", "server": "EUW1", "puuid": null, "omashuId": "11929f51-3614-41b0-ad8f-5b48daa6bc60"}
+{"riotId": "Leavy#001", "server": "EUW1", "puuid": null, "omashuId": "2b4fcece-99fa-42a1-a95a-fcb20822eed3"}

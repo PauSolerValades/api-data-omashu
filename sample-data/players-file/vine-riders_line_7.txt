@@ -1,0 +1,1 @@
+{"riotId": "nemesis2002#EUW", "server": "EUW1", "puuid": null, "omashuId": "dfd83acd-0ea5-43c9-a2d5-90afe84fb0cb"}

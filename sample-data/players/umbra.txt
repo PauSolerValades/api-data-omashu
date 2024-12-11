@@ -1,0 +1,7 @@
+{"riotId": "AshLynx25#EUW", "server": "EUW1", "puuid": null, "omashuId": "c5a95b92-3e86-43e0-8593-3e99576f4ca3"}
+{"riotId": "coachpotato#EUW", "server": "EUW1", "puuid": null, "omashuId": "21f38a58-22d0-422e-8e63-dfb87baa6cb5"}
+{"riotId": "BlackShot#ICKK", "server": "EUW1", "puuid": null, "omashuId": "d4afc10d-2bd4-4bd1-af1b-86b795b67a4e"}
+{"riotId": "Valdesh#1210", "server": "EUW1", "puuid": null, "omashuId": "d6fefe91-d27b-4c5d-b359-8f4c02b8de61"}
+{"riotId": "Bochuelas#9395", "server": "EUW1", "puuid": null, "omashuId": "3b7d4cc1-a9de-43e3-bd97-15826253bf44"}
+{"riotId": "Amonemi#Spain", "server": "EUW1", "puuid": null, "omashuId": "b513558b-6c5f-4417-a27b-646591c63579"}
+{"riotId": "Geonoid#EUW", "server": "EUW1", "puuid": null, "omashuId": "eeb9cba0-65d3-4497-81c7-a1ffdb598271"}

@@ -1,0 +1,14 @@
+stats-player-spider-graph 1 1 stats-player-spider-graph.avsc false delete 0
+stats-player-global 1 1 stats-player-global.avsc false delete 0
+stats-player 1 1 stats-player.avsc false delete 1
+download-status 1 1 download-status.avsc true compact 1
+download-start 1 1 download-start.avsc false delete 1
+match-data 1 1 match-data.avsc false delete 1
+stats-match-summary 1 1 stats-match-summary.avsc false delete 0
+stats-match-contribution 1 1 stats-match-contribution.avsc false delete 0
+stats-match 1 1 stats-match.avsc false delete 1
+stats-team-period 1 1 stats-team-period.avsc false delete 1
+match-to-store 1 1 match-to-store.avsc false delete 1
+match-player-data 1 1 match-player-data.avsc false delete 1
+match-team-data 1 1 match-team-data.avsc false delete 1
+match-game-data 1 1 match-game-data.avsc false delete 1

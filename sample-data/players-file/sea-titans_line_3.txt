@@ -1,0 +1,1 @@
+{"riotId": "gerani vermell#EUW", "server": "EUW1", "puuid": null, "omashuId": "947dcf5e-3fee-4ca2-a46a-d8cbf4371939"}

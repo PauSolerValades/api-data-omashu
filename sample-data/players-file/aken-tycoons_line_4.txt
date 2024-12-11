@@ -1,0 +1,1 @@
+{"riotId": "LegitSapo#EUW", "server": "EUW1", "puuid": null, "omashuId": "46350095-1414-47a2-8a41-95219c80f45a"}

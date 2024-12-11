@@ -1,0 +1,7 @@
+{"riotId": "Ηαnαmichi Sαk#5859", "server": "EUW1", "puuid": null, "omashuId": "f00ee6d1-ca49-43b7-9042-8f9c393a02e2"}
+{"riotId": "kang yuna#23160", "server": "EUW1", "puuid": null, "omashuId": "c338b12e-238a-4ee0-aa89-9056fd116f29"}
+{"riotId": "TAKEMETOHELL#EUW", "server": "EUW1", "puuid": null, "omashuId": "5ae3fb0b-8e27-471b-b69b-2e3b4ba5770f"}
+{"riotId": "34 35#EUNE", "server": "EUN1", "puuid": null, "omashuId": "76ce796b-cdb7-4b79-8b8f-c20442f2b18d"}
+{"riotId": "carmonell mbembe#420", "server": "EUW1", "puuid": null, "omashuId": "b55adf8b-a81a-4824-89e2-fbb20681b08c"}
+{"riotId": "aye2909#EUW", "server": "EUW1", "puuid": null, "omashuId": "b1c40a54-e996-4347-9600-0300b9baa7b7"}
+{"riotId": "nemesis2002#EUW", "server": "EUW1", "puuid": null, "omashuId": "dfd83acd-0ea5-43c9-a2d5-90afe84fb0cb"}

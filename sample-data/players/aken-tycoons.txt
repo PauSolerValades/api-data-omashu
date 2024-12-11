@@ -1,0 +1,7 @@
+{"riotId": "Aureolus13#EUW", "server": "EUW1", "puuid": null, "omashuId": "52a2cef2-e4b3-49da-809f-8284a0774a24"}
+{"riotId": "Resistirse#2776", "server": "EUW1", "puuid": null, "omashuId": "b254b61a-3940-4c8d-bf20-013261ae89c2"}
+{"riotId": "RozaKled#EUW", "server": "EUW1", "puuid": null, "omashuId": "229b5237-b996-4a68-a5a3-1cdb7a457639"}
+{"riotId": "LegitSapo#EUW", "server": "EUW1", "puuid": null, "omashuId": "46350095-1414-47a2-8a41-95219c80f45a"}
+{"riotId": "IsBi#ouo", "server": "EUW1", "puuid": null, "omashuId": "8c24f838-054b-4800-b5be-433338889d05"}
+{"riotId": "Inuyasha#PRAT", "server": "EUW1", "puuid": null, "omashuId": "4fac3af4-9dd3-4996-9ff0-57dcc766c8a2"}
+{"riotId": "llxvzq#EUW", "server": "EUW1", "puuid": null, "omashuId": "9e356cd8-ce5a-4c14-b7b5-a6477d263569"}

@@ -1,0 +1,7 @@
+{"riotId": "PaChhita v2#KEK", "server": "EUW1", "puuid": null, "omashuId": "a401938c-51c2-4f34-8a50-4177ba7bfb08"}
+{"riotId": "Engelbert Dubois#4JULY", "server": "EUW1", "puuid": null, "omashuId": "bc4c9258-0a2d-4ad9-b999-ead7704b5e22"}
+{"riotId": "Javierspain#Euw", "server": "EUW1", "puuid": null, "omashuId": "59b69b28-075c-4918-af12-9a6e165db993"}
+{"riotId": "Calentura#UwU", "server": "EUW1", "puuid": null, "omashuId": "99bf0c25-7d09-4383-bf3d-6c83cee18fc5"}
+{"riotId": "COOLW4#EUW", "server": "EUW1", "puuid": null, "omashuId": "94ffd486-a215-4161-8fd5-1fac340b33de"}
+{"riotId": "TonistarVT#1783", "server": "EUW1", "puuid": null, "omashuId": "76ece26b-c618-4c43-b3a3-a18f96115f52"}
+{"riotId": "Albertuchi#EUW", "server": "EUW1", "puuid": null, "omashuId": "09f51ca1-94d8-48f6-996b-efa21fa91b16"}

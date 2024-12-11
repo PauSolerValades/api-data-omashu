@@ -1,0 +1,1 @@
+{"riotId": "FoxTroop#EUW", "server": "EUW1", "puuid": null, "omashuId": "7a4542f2-8634-4dd0-b1c5-df016ae2bf38"}

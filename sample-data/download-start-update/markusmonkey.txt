@@ -1,0 +1,1 @@
+{"riotId": "MarkusMonkey#EUW", "server": "EUW1", "puuid": {"string": "QQEO_R8oUtheluFvJaTbWQRxh5iHVMVp3s22uZI9ogmE14AuAGzvHojzb_TGcgiXX0w-YW-8iuXvjw" }, "omashuId": "0515a2f1-d138-4254-8bef-bcfbd48482ea"}

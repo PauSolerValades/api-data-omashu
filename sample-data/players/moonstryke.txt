@@ -1,0 +1,7 @@
+{"riotId": "HyKei#HyKei", "server": "EUW1", "puuid": null, "omashuId": "04fac8a9-c731-483c-8d3c-e7e3c4d5c99a"}
+{"riotId": "FoxTroop#EUW", "server": "EUW1", "puuid": null, "omashuId": "7a4542f2-8634-4dd0-b1c5-df016ae2bf38"}
+{"riotId": "white24b#EUW", "server": "EUW1", "puuid": null, "omashuId": "a770c5f8-b57e-4642-8a50-5bc03134d253"}
+{"riotId": "marcelpopa135#EUW", "server": "EUW1", "puuid": null, "omashuId": "1a143690-a5b4-4920-8476-37e9dbe52108"}
+{"riotId": "Kaysem#EUW", "server": "EUW1", "puuid": null, "omashuId": "102b4d91-d3cd-442a-960e-8b1dd11ca632"}
+{"riotId": "NEVER FF GRRR#Ivy", "server": "EUW1", "puuid": null, "omashuId": "b7f9d135-43ff-4db8-b8d7-368e6538c970"}
+{"riotId": "Davtor108#EUW", "server": "EUW1", "puuid": null, "omashuId": "5a04df19-92d6-4c80-a72c-03bbb619488d"}

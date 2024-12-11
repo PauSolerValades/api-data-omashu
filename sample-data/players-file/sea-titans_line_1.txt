@@ -1,0 +1,1 @@
+{"riotId": "Tris#Miso", "server": "EUW1", "puuid": null, "omashuId": "2f1bd363-0edb-41cb-99f8-6cbe64b04a38"}

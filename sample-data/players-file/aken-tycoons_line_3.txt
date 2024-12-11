@@ -1,0 +1,1 @@
+{"riotId": "RozaKled#EUW", "server": "EUW1", "puuid": null, "omashuId": "229b5237-b996-4a68-a5a3-1cdb7a457639"}

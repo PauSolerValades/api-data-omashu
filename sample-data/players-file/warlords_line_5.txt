@@ -1,0 +1,1 @@
+{"riotId": "COOLW4#EUW", "server": "EUW1", "puuid": null, "omashuId": "94ffd486-a215-4161-8fd5-1fac340b33de"}

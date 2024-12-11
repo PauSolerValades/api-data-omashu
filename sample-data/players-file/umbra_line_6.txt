@@ -1,0 +1,1 @@
+{"riotId": "Amonemi#Spain", "server": "EUW1", "puuid": null, "omashuId": "b513558b-6c5f-4417-a27b-646591c63579"}

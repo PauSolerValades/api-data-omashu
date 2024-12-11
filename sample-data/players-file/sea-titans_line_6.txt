@@ -1,0 +1,1 @@
+{"riotId": "ElBuscaPercales#EUW", "server": "EUW1", "puuid": null, "omashuId": "11929f51-3614-41b0-ad8f-5b48daa6bc60"}

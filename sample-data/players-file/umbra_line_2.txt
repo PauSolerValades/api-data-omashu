@@ -1,0 +1,1 @@
+{"riotId": "coachpotato#EUW", "server": "EUW1", "puuid": null, "omashuId": "21f38a58-22d0-422e-8e63-dfb87baa6cb5"}
